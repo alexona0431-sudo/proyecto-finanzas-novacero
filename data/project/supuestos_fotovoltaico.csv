@@ -1,0 +1,23 @@
+parametro,valor,unidad,tipo_dato,fuente,observacion
+potencia_instalada,1000,kWp,supuesto,Diseño académico,Escala preliminar del sistema
+costo_unitario,850,USD/kWp,supuesto,Referencia de mercado,Debe reemplazarse si se obtiene cotización
+inversion_inicial,850000,USD,calculado,Potencia por costo unitario,Inversión sin IVA
+produccion_especifica,1500,kWh/kWp-año,supuesto,Global Solar Atlas,Estimación para el análisis inicial
+generacion_primer_anio,1500000,kWh,calculado,Potencia por producción específica,Generación bruta estimada
+porcentaje_autoconsumo,0.90,proporción,supuesto,Perfil industrial estimado,Debe verificarse con facturas eléctricas
+tarifa_energia,0.085,USD/kWh,supuesto_ARCONEL,Pliego tarifario ARCONEL 2026,Valor de referencia para horario industrial
+crecimiento_tarifa,0.02,proporción_anual,supuesto,Escenario base,Crecimiento anual estimado
+degradacion_paneles,0.005,proporción_anual,supuesto_técnico,Referencia técnica,Equivale a 0.5 por ciento anual
+operacion_mantenimiento,0.015,proporción_inversión_anual,supuesto_técnico,Referencia técnica,Equivale a 1.5 por ciento de la inversión
+inflacion_mantenimiento,0.02,proporción_anual,supuesto,Escenario base,Crecimiento anual del mantenimiento
+vida_util,20,años,supuesto_técnico,Referencia técnica,Horizonte de evaluación
+reemplazo_inversor_anio,10,año,supuesto_técnico,Referencia técnica,Reemplazo previsto en el año 10
+costo_reemplazo_inversor,0.08,proporción_inversión,supuesto_técnico,Referencia técnica,Equivale a 8 por ciento de la inversión
+valor_residual,0.10,proporción_inversión,supuesto,Escenario base,Valor recuperable al final del año 20
+porcentaje_credito,0.70,proporción,supuesto_financiero,Alternativa con crédito,Financia 70 por ciento de la inversión
+porcentaje_recursos_propios,0.30,proporción,supuesto_financiero,Alternativa con crédito,Aporte propio del 30 por ciento
+tasa_credito,0.0691,proporción_anual,dato_oficial,Banco Central del Ecuador,Tasa productiva corporativa referencial julio 2026
+plazo_credito,5,años,supuesto_financiero,Alternativa con crédito,Pagos anuales
+tasa_impuesto_renta,0.25,proporción,dato_oficial,Servicio de Rentas Internas,Tarifa general para sociedades
+costo_patrimonio,0.125,proporción_anual,supuesto_financiero,Escenario base,Rentabilidad requerida por los accionistas
+tasa_descuento_base,0.10,proporción_anual,supuesto_financiero,Escenario conservador,Tasa usada inicialmente para el VAN
