@@ -1,0 +1,34 @@
+anio,indicador,valor,unidad,formula
+2023,Liquidez corriente,1.758311,veces,Activo corriente / Pasivo corriente
+2023,Prueba ácida,0.572175,veces,(Activo corriente - Inventarios) / Pasivo corriente
+2023,Razón de efectivo,0.041898,veces,Efectivo / Pasivo corriente
+2023,Nivel de endeudamiento,54.598389,%,Pasivo total / Activo total
+2023,Deuda sobre patrimonio,1.202565,veces,Pasivo total / Patrimonio
+2023,Margen bruto,26.881309,%,Utilidad bruta / Ventas
+2023,Margen operativo,10.342537,%,Utilidad operativa / Ventas
+2023,Margen neto,4.645797,%,Utilidad neta / Ventas
+2023,ROA,4.420856,%,Utilidad neta / Activo total
+2023,ROE,9.737224,%,Utilidad neta / Patrimonio
+2023,Cobertura del pasivo corriente con flujo operativo,0.031900,veces,Flujo de operación / Pasivo corriente
+2024,Liquidez corriente,1.755454,veces,Activo corriente / Pasivo corriente
+2024,Prueba ácida,0.966289,veces,(Activo corriente - Inventarios) / Pasivo corriente
+2024,Razón de efectivo,0.092048,veces,Efectivo / Pasivo corriente
+2024,Nivel de endeudamiento,51.073687,%,Pasivo total / Activo total
+2024,Deuda sobre patrimonio,1.043890,veces,Pasivo total / Patrimonio
+2024,Margen bruto,26.388704,%,Utilidad bruta / Ventas
+2024,Margen operativo,8.324727,%,Utilidad operativa / Ventas
+2024,Margen neto,2.843755,%,Utilidad neta / Ventas
+2024,ROA,2.742776,%,Utilidad neta / Activo total
+2024,ROE,5.605933,%,Utilidad neta / Patrimonio
+2024,Cobertura del pasivo corriente con flujo operativo,0.476169,veces,Flujo de operación / Pasivo corriente
+2025,Liquidez corriente,1.585127,veces,Activo corriente / Pasivo corriente
+2025,Prueba ácida,0.760087,veces,(Activo corriente - Inventarios) / Pasivo corriente
+2025,Razón de efectivo,0.042696,veces,Efectivo / Pasivo corriente
+2025,Nivel de endeudamiento,61.785757,%,Pasivo total / Activo total
+2025,Deuda sobre patrimonio,1.616825,veces,Pasivo total / Patrimonio
+2025,Margen bruto,27.663633,%,Utilidad bruta / Ventas
+2025,Margen operativo,9.129120,%,Utilidad operativa / Ventas
+2025,Margen neto,4.170921,%,Utilidad neta / Ventas
+2025,ROA,3.807533,%,Utilidad neta / Activo total
+2025,ROE,9.963650,%,Utilidad neta / Patrimonio
+2025,Cobertura del pasivo corriente con flujo operativo,-0.138109,veces,Flujo de operación / Pasivo corriente
