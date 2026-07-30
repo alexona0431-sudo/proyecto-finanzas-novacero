@@ -3,3 +3,4 @@ numpy
 numpy-financial
 openpyxl
 matplotlib
+pypdf

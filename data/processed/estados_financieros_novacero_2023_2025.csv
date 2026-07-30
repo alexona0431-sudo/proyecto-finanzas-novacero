@@ -1,0 +1,85 @@
+cuenta,codigo_contable,anio,valor,unidad,pdf_fuente,pagina,tipo_dato,formula,estado_validacion
+Activo corriente,101,2023,194643079.96,USD,2023_balance.pdf,1,extraído,"valor reportado en el PDF (código 101, página 1)",validado
+Activo corriente,101,2024,174187868.08,USD,2024_balance.pdf,1,extraído,"valor reportado en el PDF (código 101, página 1)",validado
+Activo corriente,101,2025,245198838.83,USD,2025_balance.pdf,1,extraído,"valor reportado en el PDF (código 101, página 1)",validado
+Activo no corriente,102,2023,155599829.48,USD,2023_balance.pdf,4,extraído,"valor reportado en el PDF (código 102, página 4)",validado
+Activo no corriente,102,2024,163375580.53,USD,2024_balance.pdf,4,extraído,"valor reportado en el PDF (código 102, página 4)",validado
+Activo no corriente,102,2025,181455793.87,USD,2025_balance.pdf,4,extraído,"valor reportado en el PDF (código 102, página 4)",validado
+Activo total,1,2023,350242909.44,USD,2023_balance.pdf,1,extraído,"valor reportado en el PDF (código 1, página 1)",validado
+Activo total,1,2024,337563448.61,USD,2024_balance.pdf,1,extraído,"valor reportado en el PDF (código 1, página 1)",validado
+Activo total,1,2025,426654632.70,USD,2025_balance.pdf,1,extraído,"valor reportado en el PDF (código 1, página 1)",validado
+Efectivo y equivalentes,10101,2023,4638098.53,USD,2023_balance.pdf,1,extraído,"valor reportado en el PDF (código 10101, página 1)",validado
+Efectivo y equivalentes,10101,2024,9133620.05,USD,2024_balance.pdf,1,extraído,"valor reportado en el PDF (código 10101, página 1)",validado
+Efectivo y equivalentes,10101,2025,6604545.58,USD,2025_balance.pdf,1,extraído,"valor reportado en el PDF (código 10101, página 1)",validado
+Cuentas por cobrar no relacionadas,1010205,2023,51850781.71,USD,2023_balance.pdf,3,extraído,"valor reportado en el PDF (código 1010205, página 3)",validado
+Cuentas por cobrar no relacionadas,1010205,2024,75267901.45,USD,2024_balance.pdf,3,extraído,"valor reportado en el PDF (código 1010205, página 3)",validado
+Cuentas por cobrar no relacionadas,1010205,2025,105881755.77,USD,2025_balance.pdf,3,extraído,"valor reportado en el PDF (código 1010205, página 3)",validado
+Inventarios,10103,2023,131303904.87,USD,2023_balance.pdf,3,extraído,"valor reportado en el PDF (código 10103, página 3)",validado
+Inventarios,10103,2024,78306192.89,USD,2024_balance.pdf,3,extraído,"valor reportado en el PDF (código 10103, página 3)",validado
+Inventarios,10103,2025,127623129.17,USD,2025_balance.pdf,3,extraído,"valor reportado en el PDF (código 10103, página 3)",validado
+Pasivo corriente,201,2023,110698892.25,USD,2023_balance.pdf,5,extraído,"valor reportado en el PDF (código 201, página 5)",validado
+Pasivo corriente,201,2024,99226679.77,USD,2024_balance.pdf,5,extraído,"valor reportado en el PDF (código 201, página 5)",validado
+Pasivo corriente,201,2025,154687219.35,USD,2025_balance.pdf,5,extraído,"valor reportado en el PDF (código 201, página 5)",validado
+Pasivo no corriente,202,2023,80528093.81,USD,2023_balance.pdf,6,extraído,"valor reportado en el PDF (código 202, página 6)",validado
+Pasivo no corriente,202,2024,73179418.29,USD,2024_balance.pdf,6,extraído,"valor reportado en el PDF (código 202, página 6)",validado
+Pasivo no corriente,202,2025,108924574.89,USD,2025_balance.pdf,6,extraído,"valor reportado en el PDF (código 202, página 6)",validado
+Pasivo total,2,2023,191226986.06,USD,2023_balance.pdf,5,extraído,"valor reportado en el PDF (código 2, página 5)",validado
+Pasivo total,2,2024,172406098.06,USD,2024_balance.pdf,5,extraído,"valor reportado en el PDF (código 2, página 5)",validado
+Pasivo total,2,2025,263611794.24,USD,2025_balance.pdf,5,extraído,"valor reportado en el PDF (código 2, página 5)",validado
+Patrimonio,3,2023,159015923.38,USD,2023_balance.pdf,7,extraído,"valor reportado en el PDF (código 3, página 7)",validado
+Patrimonio,3,2024,165157350.55,USD,2024_balance.pdf,7,extraído,"valor reportado en el PDF (código 3, página 7)",validado
+Patrimonio,3,2025,163042838.46,USD,2025_balance.pdf,7,extraído,"valor reportado en el PDF (código 3, página 7)",validado
+Ingresos de actividades ordinarias,401,2023,333284786.01,USD,2023_resultados.pdf,1,extraído,"valor reportado en el PDF (código 401, página 1)",validado
+Ingresos de actividades ordinarias,401,2024,325576933.21,USD,2024_resultados.pdf,1,extraído,"valor reportado en el PDF (código 401, página 1)",validado
+Ingresos de actividades ordinarias,401,2025,389482742.64,USD,2025_resultados.pdf,1,extraído,"valor reportado en el PDF (código 401, página 1)",validado
+Costo de ventas,501,2023,243693474.49,USD,2023_resultados.pdf,2,extraído,"valor reportado en el PDF (código 501, página 2)",validado
+Costo de ventas,501,2024,239661400.69,USD,2024_resultados.pdf,2,extraído,"valor reportado en el PDF (código 501, página 2)",validado
+Costo de ventas,501,2025,281737664.58,USD,2025_resultados.pdf,2,extraído,"valor reportado en el PDF (código 501, página 2)",validado
+Utilidad bruta,402,2023,89591311.52,USD,2023_resultados.pdf,2,extraído,"valor reportado en el PDF (código 402, página 2)",validado
+Utilidad bruta,402,2024,85915532.52,USD,2024_resultados.pdf,2,extraído,"valor reportado en el PDF (código 402, página 2)",validado
+Utilidad bruta,402,2025,107745078.06,USD,2025_resultados.pdf,2,extraído,"valor reportado en el PDF (código 402, página 2)",validado
+Otros ingresos,403,2023,2288127.74,USD,2023_resultados.pdf,2,extraído,"valor reportado en el PDF (código 403, página 2)",validado
+Otros ingresos,403,2024,3194488.68,USD,2024_resultados.pdf,2,extraído,"valor reportado en el PDF (código 403, página 2)",validado
+Otros ingresos,403,2025,2402918.27,USD,2025_resultados.pdf,2,extraído,"valor reportado en el PDF (código 403, página 2)",validado
+Gastos totales,502,2023,67598907.24,USD,2023_resultados.pdf,2,extraído,"valor reportado en el PDF (código 502, página 2)",validado
+Gastos totales,502,2024,73843131.89,USD,2024_resultados.pdf,2,extraído,"valor reportado en el PDF (código 502, página 2)",validado
+Gastos totales,502,2025,84761066.05,USD,2025_resultados.pdf,2,extraído,"valor reportado en el PDF (código 502, página 2)",validado
+Gastos de venta,50201,2023,45172459.05,USD,2023_resultados.pdf,2,extraído,"valor reportado en el PDF (código 50201, página 2)",validado
+Gastos de venta,50201,2024,46788601.73,USD,2024_resultados.pdf,2,extraído,"valor reportado en el PDF (código 50201, página 2)",validado
+Gastos de venta,50201,2025,59695607.63,USD,2025_resultados.pdf,2,extraído,"valor reportado en el PDF (código 50201, página 2)",validado
+Gastos administrativos,50202,2023,12236879.35,USD,2023_resultados.pdf,3,extraído,"valor reportado en el PDF (código 50202, página 3)",validado
+Gastos administrativos,50202,2024,15218027.04,USD,2024_resultados.pdf,3,extraído,"valor reportado en el PDF (código 50202, página 3)",validado
+Gastos administrativos,50202,2025,14896041.04,USD,2025_resultados.pdf,3,extraído,"valor reportado en el PDF (código 50202, página 3)",validado
+Gastos financieros,50203,2023,10189568.84,USD,2023_resultados.pdf,4,extraído,"valor reportado en el PDF (código 50203, página 4)",validado
+Gastos financieros,50203,2024,11836503.12,USD,2024_resultados.pdf,4,extraído,"valor reportado en el PDF (código 50203, página 4)",validado
+Gastos financieros,50203,2025,10169417.38,USD,2025_resultados.pdf,4,extraído,"valor reportado en el PDF (código 50203, página 4)",validado
+Utilidad antes de impuestos,602,2023,20638452.22,USD,2023_resultados.pdf,5,extraído,"valor reportado en el PDF (código 602, página 5)",validado
+Utilidad antes de impuestos,602,2024,12976855.9135,USD,2024_resultados.pdf,5,extraído,"valor reportado en el PDF (código 602, página 5)",validado
+Utilidad antes de impuestos,602,2025,21578890.738,USD,2025_resultados.pdf,5,extraído,"valor reportado en el PDF (código 602, página 5)",validado
+Impuesto a la renta,603,2023,5459889.17,USD,2023_resultados.pdf,5,extraído,"valor reportado en el PDF (código 603, página 5)",validado
+Impuesto a la renta,603,2024,3983417.93,USD,2024_resultados.pdf,5,extraído,"valor reportado en el PDF (código 603, página 5)",validado
+Impuesto a la renta,603,2025,5588406.55,USD,2025_resultados.pdf,5,extraído,"valor reportado en el PDF (código 603, página 5)",validado
+Utilidad neta,707,2023,15483736.24,USD,2023_resultados.pdf,5,extraído,"valor reportado en el PDF (código 707, página 5)",validado
+Utilidad neta,707,2024,9258610.72349996,USD,2024_resultados.pdf,5,extraído,"valor reportado en el PDF (código 707, página 5)",validado
+Utilidad neta,707,2025,16245017.588,USD,2025_resultados.pdf,5,extraído,"valor reportado en el PDF (código 707, página 5)",validado
+Gastos operativos,-,2023,57409338.40,USD,2023_resultados.pdf,3,calculado,gastos de venta + gastos administrativos,validado
+Gastos operativos,-,2024,62006628.77,USD,2024_resultados.pdf,3,calculado,gastos de venta + gastos administrativos,validado
+Gastos operativos,-,2025,74591648.67,USD,2025_resultados.pdf,3,calculado,gastos de venta + gastos administrativos,validado
+Utilidad operativa,-,2023,34470100.86,USD,2023_resultados.pdf,3,calculado,utilidad bruta + otros ingresos - gastos operativos,validado
+Utilidad operativa,-,2024,27103392.43,USD,2024_resultados.pdf,3,calculado,utilidad bruta + otros ingresos - gastos operativos,validado
+Utilidad operativa,-,2025,35556347.66,USD,2025_resultados.pdf,3,calculado,utilidad bruta + otros ingresos - gastos operativos,validado
+Flujo de operación,9501,2023,3531239.94,USD,2023_flujo_efectivo.pdf,1,extraído,"valor reportado en el PDF (código 9501, página 1)",validado
+Flujo de operación,9501,2024,47248679.58,USD,2024_flujo_efectivo.pdf,1,extraído,"valor reportado en el PDF (código 9501, página 1)",validado
+Flujo de operación,9501,2025,-21363685.38,USD,2025_flujo_efectivo.pdf,1,extraído,"valor reportado en el PDF (código 9501, página 1)",validado
+Flujo de inversión,9502,2023,-19506643.71,USD,2023_flujo_efectivo.pdf,1,extraído,"valor reportado en el PDF (código 9502, página 1)",validado
+Flujo de inversión,9502,2024,-18108058.78,USD,2024_flujo_efectivo.pdf,1,extraído,"valor reportado en el PDF (código 9502, página 1)",validado
+Flujo de inversión,9502,2025,-27228503.30,USD,2025_flujo_efectivo.pdf,1,extraído,"valor reportado en el PDF (código 9502, página 1)",validado
+Flujo de financiamiento,9503,2023,12957029.12,USD,2023_flujo_efectivo.pdf,1,extraído,"valor reportado en el PDF (código 9503, página 1)",validado
+Flujo de financiamiento,9503,2024,-24645099.28,USD,2024_flujo_efectivo.pdf,1,extraído,"valor reportado en el PDF (código 9503, página 1)",validado
+Flujo de financiamiento,9503,2025,46063114.21,USD,2025_flujo_efectivo.pdf,1,extraído,"valor reportado en el PDF (código 9503, página 1)",validado
+Variación neta de efectivo,-,2023,-3018374.65,USD,2023_flujo_efectivo.pdf,1,calculado,operación + inversión + financiamiento,validado
+Variación neta de efectivo,-,2024,4495521.52,USD,2024_flujo_efectivo.pdf,1,calculado,operación + inversión + financiamiento,validado
+Variación neta de efectivo,-,2025,-2529074.47,USD,2025_flujo_efectivo.pdf,1,calculado,operación + inversión + financiamiento,validado
+Saldo final de efectivo,9507,2023,4638098.53,USD,2023_flujo_efectivo.pdf,2,extraído,"valor reportado en el PDF (código 9507, página 2)",validado
+Saldo final de efectivo,9507,2024,9133620.05,USD,2024_flujo_efectivo.pdf,2,extraído,"valor reportado en el PDF (código 9507, página 2)",validado
+Saldo final de efectivo,9507,2025,6604545.58,USD,2025_flujo_efectivo.pdf,2,extraído,"valor reportado en el PDF (código 9507, página 2)",validado

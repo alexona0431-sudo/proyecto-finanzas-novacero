@@ -1,32 +1,29 @@
-﻿# Diccionario de datos del proyecto
+﻿# Diccionario de datos
 
 ## Propósito
-Definir las variables, categorías y estructuras básicas que se usarán para organizar la información del análisis.
+Definir la estructura y el significado de los registros financieros que conforman la base de Novacero.
 
-## Variables propuestas
-- fecha_recoleccion: fecha en que se registró la fuente o dato.
-- fuente: nombre o referencia de la documentación consultada.
-- tipo_fuente: documental, institucional, técnica, financiera o regulatoria.
-- categoria: grupo de información, por ejemplo consumo energético, costos, financiación, regulación o riesgo.
-- variable: nombre de la variable específica.
-- valor: dato o texto asociado.
-- unidad: unidad de medida de la variable, si aplica.
-- observaciones: notas aclaratorias o condiciones del dato.
-- estado_validacion: pendiente, validado o rechazado.
+## Estructura del archivo
+Cada registro representa una cuenta o partida para un año concreto y se guarda en formato largo con estas columnas:
 
-## Estructura recomendada para tablas
-- id_registro: identificador único.
-- fecha_recoleccion: fecha de registro.
-- fuente: referencia documental.
-- tipo_fuente: categoría de la fuente.
-- categoria: bloque temático.
-- variable: variable concreta.
-- valor: valor numérico o textual.
-- unidad: unidad de medida.
-- observaciones: notas de contexto.
-- estado_validacion: estado de revisión.
+- cuenta: nombre de la partida contable o financiera.
+- codigo_contable: código contable asociado al valor cuando aplica; para cálculos derivados se usa "-".
+- anio: año de la observación, 2023, 2024 o 2025.
+- valor: cifra numérica, ya sea extraída directamente del PDF o calculada a partir de otras partidas.
+- unidad: moneda o unidad de medida; en este estudio USD.
+- pdf_fuente: nombre del archivo PDF original que sustentó la cifra.
+- pagina: página del PDF que corresponde al valor reportado.
+- tipo_dato: "extraído" para cifras que aparecen directamente en los PDF, o "calculado" para resultados derivados.
+- formula: fórmula utilizada para el valor, ya sea el valor reportado en el PDF o la operación aritmética aplicada.
+- estado_validacion: estado de revisión; en esta base se usa "validado" para todo registro.
+
+## Cuentas incluidas
+- Balance: activo corriente, activo no corriente, activo total, efectivo y equivalentes, cuentas por cobrar no relacionadas, inventarios, pasivo corriente, pasivo no corriente, pasivo total y patrimonio.
+- Resultados: ingresos de actividades ordinarias, costo de ventas, utilidad bruta, otros ingresos, gastos totales, gastos de venta, gastos administrativos, gastos financieros, utilidad antes de impuestos, impuesto a la renta y utilidad neta.
+- Flujo de efectivo: flujo de operación, flujo de inversión, flujo de financiamiento, variación neta de efectivo y saldo final de efectivo.
+- Cálculos derivados: gastos operativos, utilidad operativa y variación neta de efectivo.
 
 ## Reglas de uso
-- Cada registro debe mantener trazabilidad a una fuente.
-- No se deben incluir valores sin contexto o sin validación.
-- Los datos deben ser susceptibles de revisión manual y de auditoría.
+- Cada cifra conserva trazabilidad al PDF original y a la página indicada.
+- No se inventan valores; los cálculos derivados se realizan únicamente a partir de partidas verificadas.
+- Las validaciones contables se ejecutan sobre los valores publicados en la base.
