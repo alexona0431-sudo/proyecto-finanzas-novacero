@@ -1,26 +1,320 @@
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #12221d;
+  --muted: #66756f;
+  --paper: #f4f6f2;
+  --white: #ffffff;
+  --green: #185f49;
+  --green-dark: #0e3f32;
+  --green-soft: #dfece5;
+  --lime: #b8d35d;
+  --orange: #ed914b;
+  --red: #c34b3f;
+  --line: #dce3dd;
+  --shadow: 0 16px 45px rgba(18, 34, 29, 0.08);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+main { overflow: hidden; }
+
+.topbar {
+  height: 82px;
+  padding: 0 clamp(24px, 5vw, 76px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,.94);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(14px);
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark {
+  width: 42px; height: 42px; display: grid; place-items: center;
+  color: white; background: var(--green); font: 800 22px/1 "Manrope";
+  border-radius: 4px 14px 4px 14px;
+}
+.brand strong, .brand small { display: block; }
+.brand strong { font: 800 15px/1.1 "Manrope"; letter-spacing: .08em; }
+.brand small { margin-top: 3px; color: var(--muted); font-size: 11px; }
+.topbar nav { display: flex; gap: 30px; font-size: 13px; font-weight: 600; }
+.topbar nav a:hover { color: var(--green); }
+.updated { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; }
+.updated span { width: 8px; height: 8px; border-radius: 50%; background: #52a66f; box-shadow: 0 0 0 5px #e7f4eb; }
+
+.hero {
+  min-height: 620px;
+  padding: 95px clamp(24px, 7vw, 110px);
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  align-items: center;
+  gap: clamp(40px, 7vw, 110px);
+  color: white;
+  background:
+    radial-gradient(circle at 82% 28%, rgba(184,211,93,.18), transparent 26%),
+    linear-gradient(130deg, #0b362b 0%, #165b47 62%, #0d4638 100%);
+  position: relative;
+}
+.hero::after {
+  content: ""; position: absolute; right: -80px; bottom: -160px;
+  width: 480px; height: 480px; border: 1px solid rgba(255,255,255,.09);
+  border-radius: 50%;
+}
+.eyebrow { color: var(--lime); font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.hero h1, .final-recommendation h2 {
+  margin: 20px 0 24px; font: 800 clamp(44px, 6vw, 78px)/.98 "Manrope";
+  letter-spacing: -.055em;
+}
+.hero h1 span, .final-recommendation h2 span { color: var(--lime); }
+.hero-copy > p { max-width: 690px; color: #d6e2dd; font-size: 17px; line-height: 1.7; }
+.hero-actions { display: flex; gap: 12px; margin-top: 34px; }
+.button { padding: 14px 20px; border-radius: 7px; font-size: 13px; font-weight: 700; }
+.button.primary { color: var(--green-dark); background: var(--lime); }
+.button.ghost { border: 1px solid rgba(255,255,255,.3); }
+.decision-panel {
+  padding: 30px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+  border-radius: 16px; box-shadow: 0 24px 70px rgba(0,0,0,.2); backdrop-filter: blur(8px); z-index: 1;
+}
+.decision-top { display: flex; align-items: center; justify-content: space-between; gap: 15px; color: #bfcec8; font-size: 10px; letter-spacing: .12em; }
+.status { display: inline-block; width: max-content; padding: 7px 10px; border-radius: 99px; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+.status.warning { color: #ffc28f; background: rgba(237,145,75,.18); }
+.status.positive { color: #bfe9cb; background: rgba(82,166,111,.2); }
+.status.negative { color: #ffb4ab; background: rgba(195,75,63,.2); }
+.decision-number { margin: 38px 0 8px; font: 800 clamp(30px, 4vw, 48px)/1 "Manrope"; }
+.decision-panel > p { color: #c7d6d0; line-height: 1.55; }
+.threshold { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 28px; }
+.threshold div { padding: 15px; background: rgba(0,0,0,.14); border-radius: 8px; }
+.threshold span, .threshold strong { display: block; }
+.threshold span { color: #aebfba; font-size: 10px; margin-bottom: 7px; }
+.threshold strong { font: 700 14px "Manrope"; }
+
+.metrics-strip {
+  width: min(1180px, calc(100% - 48px)); margin: -42px auto 0; display: grid;
+  grid-template-columns: repeat(4,1fr); position: relative; z-index: 3;
+  background: white; border-radius: 13px; box-shadow: var(--shadow);
+}
+.metrics-strip article { padding: 25px 26px; border-right: 1px solid var(--line); }
+.metrics-strip article:last-child { border: 0; }
+.metrics-strip .icon { float: right; color: var(--green); }
+.metrics-strip span:not(.icon), .metrics-strip small, .metrics-strip strong { display: block; }
+.metrics-strip span:not(.icon) { color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .1em; }
+.metrics-strip strong { margin: 8px 0 5px; font: 800 25px "Manrope"; }
+.metrics-strip small { color: var(--muted); font-size: 10px; line-height: 1.4; }
+.red { color: var(--red) !important; }
+.green { color: #2a9a62 !important; }
+
+.economic-context {
+  width: min(1180px, calc(100% - 48px)); margin: 22px auto 0; padding: 20px 24px;
+  display: grid; grid-template-columns: 1.25fr repeat(4,1fr); gap: 0;
+  background: #e7ece7; border: 1px solid #d9e1da; border-radius: 11px;
+}
+.economic-context > div, .economic-context article { padding: 6px 20px; border-right: 1px solid #d2dbd3; }
+.economic-context article:last-child { border: 0; }
+.economic-context span, .economic-context strong, .economic-context small { display: block; }
+.context-intro span, .economic-context article span { color: var(--green); font-size: 9px; font-weight: 700; letter-spacing: .08em; }
+.context-intro strong { margin-top: 8px; font: 700 14px "Manrope"; }
+.economic-context article strong { margin: 5px 0 2px; font: 800 20px "Manrope"; }
+.economic-context article small { color: var(--muted); font-size: 9px; }
+
+.section { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 105px 0 0; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 35px; }
+.section-heading > div { display: flex; align-items: center; gap: 16px; }
+.section-number { color: var(--green); font: 800 13px "Manrope"; }
+.section-heading h2 { margin: 0; font: 800 clamp(28px, 4vw, 42px)/1.1 "Manrope"; letter-spacing: -.04em; }
+.section-heading p { max-width: 430px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; text-align: right; }
+.grid.two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.card { padding: 28px; background: white; border: 1px solid var(--line); border-radius: 13px; box-shadow: 0 8px 30px rgba(18,34,29,.04); }
+.card-title { display: flex; align-items: start; justify-content: space-between; gap: 15px; }
+.card-title span { color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .1em; }
+.card-title h3 { margin: 5px 0 0; font: 700 19px "Manrope"; }
+.tag, .source-chip { padding: 6px 9px; border-radius: 30px; }
+.tag.positive { color: #287651; background: #e6f3ea; letter-spacing: 0; }
+.source-chip { color: var(--muted) !important; background: var(--paper); letter-spacing: 0 !important; }
+.bar-chart { height: 220px; margin: 25px 0 14px; display: flex; align-items: end; justify-content: space-around; border-bottom: 1px solid var(--line); }
+.bar-column { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: end; gap: 8px; }
+.bar { width: clamp(44px, 6vw, 72px); border-radius: 8px 8px 0 0; background: linear-gradient(180deg,var(--lime),var(--green)); }
+.bar-value { font: 700 11px "Manrope"; }
+.bar-column strong { padding-bottom: 10px; color: var(--muted); font-size: 11px; }
+.insight, .note { margin: 20px 0 0; padding: 13px 15px; color: var(--muted); background: var(--paper); border-radius: 8px; font-size: 11px; line-height: 1.55; }
+.donut-row { min-height: 220px; display: flex; align-items: center; gap: 38px; }
+.donut {
+  width: 150px; height: 150px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%;
+  background: conic-gradient(var(--orange) 0 61.79%, #e2e8e2 61.79% 100%); position: relative;
+}
+.donut::after { content:""; position:absolute; inset: 21px; border-radius:50%; background:white; }
+.donut div { position: relative; z-index: 1; text-align: center; }
+.donut strong, .donut span { display:block; }
+.donut strong { font: 800 20px "Manrope"; }
+.donut span { color: var(--muted); font-size: 10px; }
+.balance-list { width: 100%; }
+.balance-list div { display:flex; justify-content:space-between; gap:10px; padding:11px 0; border-bottom:1px solid var(--line); font-size:12px; }
+.balance-list span { color:var(--muted); }
+.balance-list strong { font-family:"Manrope"; }
+.table-card { margin-top: 20px; }
+.table-wrap { overflow-x:auto; margin-top:20px; }
+table { width:100%; border-collapse:collapse; font-size:12px; }
+th { color:var(--muted); font-size:10px; letter-spacing:.08em; text-align:left; }
+th,td { padding:13px 14px; border-bottom:1px solid var(--line); }
+td:not(:first-child) { font-weight:600; }
+td:last-child { color:var(--muted); font-weight:400; }
+
+.dark-section {
+  width: 100%; max-width:none; padding:100px max(24px,calc((100vw - 1180px)/2));
+  margin-top:105px; color:white; background:#102c25;
+}
+.section-heading.light .section-number { color:var(--lime); }
+.section-heading.light p { color:#aebdb8; }
+.scenario-tabs { display:flex; gap:8px; margin-bottom:18px; }
+.scenario-tabs button { padding:10px 18px; color:#aab9b4; background:transparent; border:1px solid #365048; border-radius:7px; cursor:pointer; }
+.scenario-tabs button.active { color:var(--green-dark); background:var(--lime); border-color:var(--lime); font-weight:700; }
+.scenario-grid { display:grid; grid-template-columns:2fr repeat(4,1fr); gap:10px; }
+.scenario-main, .scenario-stat { padding:24px; background:#173a31; border:1px solid #315048; border-radius:10px; }
+.scenario-main { display:flex; flex-direction:column; align-items:flex-start; }
+.scenario-main small { margin-top:25px; color:#a7b7b1; letter-spacing:.1em; }
+.scenario-main > strong { margin:8px 0; font:800 36px "Manrope"; }
+.scenario-main p { margin:8px 0 0; color:#bdcbc7; font-size:12px; line-height:1.55; }
+.scenario-stat { display:flex; flex-direction:column; justify-content:center; }
+.scenario-stat span { color:#9db0aa; font-size:10px; letter-spacing:.1em; }
+.scenario-stat strong { margin:12px 0 5px; font:800 20px "Manrope"; }
+.scenario-stat small { color:#81958f; font-size:9px; }
+.cashflow-card { margin-top:20px; }
+.dark-chip { color:#b8c9c3 !important; background:#102f27 !important; }
+.cashflow-chart { width:100%; margin-top:10px; overflow-x:auto; }
+.cashflow-chart svg { min-width:720px; width:100%; height:auto; }
+.zero-line { stroke:#739087; stroke-width:1; stroke-dasharray:5 6; }
+.axis-label,.flow-value,.year-label { fill:#9db1aa; font-family:"DM Sans",Arial,sans-serif; }
+.axis-label,.year-label { font-size:9px; }
+.flow-value { fill:#e7f0ed; font-size:10px; font-weight:700; }
+.flow-line { fill:none; stroke:var(--lime); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+.shadow-line { stroke:#0a251e; stroke-width:9; opacity:.3; }
+.guide-line { stroke:#35564d; stroke-width:1; stroke-dasharray:2 5; }
+.flow-point { fill:var(--lime); stroke:#173a31; stroke-width:3; }
+.negative-point { fill:var(--red); }
+.cashflow-notes { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:3px; }
+.cashflow-notes div { padding:15px; background:#102f27; border-radius:7px; }
+.cashflow-notes span,.cashflow-notes strong,.cashflow-notes small { display:block; }
+.cashflow-notes span { color:#9fb2ac; font-size:9px; }
+.cashflow-notes strong { margin:6px 0 2px; font:700 15px "Manrope"; }
+.cashflow-notes small { color:#728b84; font-size:8px; }
+.finance-grid { margin-top:20px; }
+.dark-card { color:white; background:#173a31; border-color:#315048; box-shadow:none; }
+.dark-card .card-title span { color:var(--lime); }
+.finance-option { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-top:12px; padding:14px; border:1px solid #35534b; border-radius:8px; }
+.finance-option.selected { background:rgba(184,211,93,.09); border-color:var(--lime); }
+.finance-option span,.finance-option small { display:block; }
+.finance-option span { font-weight:700; font-size:12px; }
+.finance-option small { margin-top:3px; color:#91a59f; font-size:9px; }
+.finance-option strong { font:700 12px "Manrope"; }
+.dark-card .note { color:#a9bbb5; background:#102f27; }
+.break-even { display:grid; grid-template-columns:110px 1fr 105px; align-items:center; gap:12px; margin-top:25px; font-size:11px; }
+.break-even > span { color:#afc0bb; }
+.break-even > div { height:7px; background:#294a41; border-radius:10px; overflow:hidden; }
+.break-even i { display:block; height:100%; background:var(--lime); border-radius:10px; }
+.break-even strong { text-align:right; font:700 11px "Manrope"; }
+
+.valuation-grid { display:grid; grid-template-columns:1fr 54px 1fr; gap:16px; align-items:center; }
+.valuation-card { padding:35px; background:white; border:1px solid var(--line); border-radius:12px; }
+.valuation-card.primary-value { color:white; background:var(--green); }
+.valuation-card > span { color:var(--muted); font-size:10px; font-weight:700; letter-spacing:.1em; }
+.primary-value > span { color:#c7dacf; }
+.valuation-card strong { display:block; margin:18px 0 14px; font:800 clamp(32px,5vw,52px) "Manrope"; }
+.valuation-card p { margin:0; color:var(--muted); font-size:12px; line-height:1.65; }
+.primary-value p { color:#d7e4df; }
+.versus { display:grid; place-items:center; width:54px; height:54px; color:var(--green); background:var(--green-soft); border-radius:50%; font:800 11px "Manrope"; }
+.policy { display:grid; grid-template-columns:220px 1fr; gap:25px; align-items:center; margin-top:18px; padding:25px 30px; background:#e8eee8; border-left:4px solid var(--lime); border-radius:7px; }
+.policy > div { display:flex; align-items:center; gap:10px; }
+.policy .icon { color:var(--green); }
+.policy h3,.policy p { margin:0; }
+.policy h3 { font:700 16px "Manrope"; }
+.policy p { color:var(--muted); font-size:12px; line-height:1.65; }
+
+.risk-list { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.risk-list article { display:grid; grid-template-columns:12px 1fr 1.2fr; align-items:center; gap:15px; padding:19px; background:white; border:1px solid var(--line); border-radius:8px; }
+.risk-dot { width:9px; height:9px; border-radius:50%; }
+.risk-dot.alto { background:var(--red); box-shadow:0 0 0 5px #f8e7e4; }
+.risk-dot.medio { background:var(--orange); box-shadow:0 0 0 5px #fbeee3; }
+.risk-list strong,.risk-list small { display:block; }
+.risk-list strong { font-size:12px; }
+.risk-list small { margin-top:4px; color:var(--muted); font-size:9px; }
+.risk-list p { margin:0; color:var(--muted); font-size:10px; line-height:1.45; }
+
+.method-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.method-grid article { padding:24px; background:white; border:1px solid var(--line); border-radius:9px; }
+.method-grid .icon { display:grid; place-items:center; width:36px; height:36px; margin-bottom:20px; color:var(--green); background:var(--green-soft); border-radius:50%; font:800 10px "Manrope"; }
+.method-grid strong { font:700 13px "Manrope"; }
+.method-grid p { margin:7px 0 0; color:var(--muted); font-size:10px; line-height:1.5; }
+.sources { margin-top:28px; padding:28px; background:white; border:1px solid var(--line); border-radius:10px; }
+.sources h3 { margin:0 0 12px; font:700 17px "Manrope"; }
+.sources a { display:flex; justify-content:space-between; align-items:center; gap:15px; padding:13px 0; border-bottom:1px solid var(--line); }
+.sources a:last-child { border:0; }
+.sources strong,.sources small { display:block; }
+.sources strong { font-size:11px; }
+.sources small { margin-top:3px; color:var(--muted); font-size:9px; }
+.sources b { color:var(--green); }
+
+.final-recommendation {
+  width:min(1180px,calc(100% - 48px)); margin:105px auto 0; padding:60px;
+  display:grid; grid-template-columns:1.1fr .9fr; align-items:center; gap:65px;
+  color:white; background:var(--green); border-radius:18px;
+}
+.final-recommendation h2 { margin-bottom:0; font-size:clamp(34px,5vw,57px); }
+.final-recommendation > p { color:#d5e3de; font-size:14px; line-height:1.8; }
+footer {
+  width:min(1180px,calc(100% - 48px)); margin:35px auto 0; padding:35px 0 45px;
+  display:flex; align-items:center; justify-content:space-between; gap:25px; color:var(--muted); font-size:10px;
+}
+
+@media (max-width: 980px) {
+  .topbar nav { display:none; }
+  .hero { grid-template-columns:1fr; padding-top:75px; }
+  .decision-panel { max-width:620px; }
+  .metrics-strip { grid-template-columns:1fr 1fr; }
+  .metrics-strip article:nth-child(2) { border-right:0; }
+  .metrics-strip article:nth-child(-n+2) { border-bottom:1px solid var(--line); }
+  .economic-context { grid-template-columns:1fr 1fr; }
+  .economic-context > div,.economic-context article { border-right:0; border-bottom:1px solid #d2dbd3; }
+  .economic-context article:nth-last-child(-n+2) { border-bottom:0; }
+  .scenario-grid { grid-template-columns:1fr 1fr; }
+  .scenario-main { grid-column:span 2; }
+  .method-grid { grid-template-columns:1fr 1fr; }
+  .final-recommendation { grid-template-columns:1fr; gap:20px; }
+}
+
+@media (max-width: 680px) {
+  .topbar { height:70px; padding:0 18px; }
+  .updated { display:none; }
+  .hero { padding:65px 24px 100px; }
+  .hero h1 { font-size:43px; }
+  .hero-actions { flex-direction:column; align-items:stretch; text-align:center; }
+  .threshold,.metrics-strip,.economic-context,.grid.two,.risk-list,.method-grid,.cashflow-notes { grid-template-columns:1fr; }
+  .metrics-strip article { border-right:0; border-bottom:1px solid var(--line); }
+  .economic-context > div,.economic-context article,.economic-context article:nth-last-child(-n+2) { border-bottom:1px solid #d2dbd3; }
+  .economic-context article:last-child { border-bottom:0; }
+  .section { width:calc(100% - 30px); padding-top:75px; }
+  .section-heading { align-items:start; flex-direction:column; }
+  .section-heading p { text-align:left; }
+  .donut-row { flex-direction:column; padding-top:25px; }
+  .dark-section { padding:75px 15px; }
+  .scenario-grid { grid-template-columns:1fr; }
+  .scenario-main { grid-column:auto; }
+  .scenario-tabs { overflow-x:auto; }
+  .valuation-grid { grid-template-columns:1fr; }
+  .versus { margin:auto; }
+  .policy { grid-template-columns:1fr; }
+  .risk-list article { grid-template-columns:12px 1fr; }
+  .risk-list p { grid-column:2; }
+  .final-recommendation { width:calc(100% - 30px); margin-top:75px; padding:38px 25px; }
+  footer { width:calc(100% - 30px); align-items:flex-start; flex-direction:column; }
 }
