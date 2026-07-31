@@ -1,0 +1,28 @@
+anio,indicador,valor,unidad,criterio
+2023,Rotación de cuentas por cobrar,6.4278,veces,saldo final (no se dispone de 2022)
+2023,Periodo medio de cobro,56.7849,días,saldo final (no se dispone de 2022)
+2023,Rotación de inventarios,1.8559,veces,saldo final (no se dispone de 2022)
+2023,Periodo medio de inventario,196.6648,días,saldo final (no se dispone de 2022)
+2023,Rotación de activos,0.9516,veces,saldo final (no se dispone de 2022)
+2023,Cobertura de intereses,3.3829,veces,utilidad operativa / gastos financieros
+2023,Margen neto DuPont,4.6458,%,utilidad neta / ventas
+2023,Multiplicador del capital,2.2026,veces,saldo final (no se dispone de 2022)
+2023,ROE DuPont,9.7372,%,margen neto × rotación de activos × multiplicador del capital
+2024,Rotación de cuentas por cobrar,5.1224,veces,saldo promedio
+2024,Periodo medio de cobro,71.2555,días,saldo promedio
+2024,Rotación de inventarios,2.2867,veces,saldo promedio
+2024,Periodo medio de inventario,159.6162,días,saldo promedio
+2024,Rotación de activos,0.9467,veces,saldo promedio
+2024,Cobertura de intereses,2.2898,veces,utilidad operativa / gastos financieros
+2024,Margen neto DuPont,2.8438,%,utilidad neta / ventas
+2024,Multiplicador del capital,2.1217,veces,saldo promedio
+2024,ROE DuPont,5.7121,%,margen neto × rotación de activos × multiplicador del capital
+2025,Rotación de cuentas por cobrar,4.3001,veces,saldo promedio
+2025,Periodo medio de cobro,84.8813,días,saldo promedio
+2025,Rotación de inventarios,2.7363,veces,saldo promedio
+2025,Periodo medio de inventario,133.394,días,saldo promedio
+2025,Rotación de activos,1.0193,veces,saldo promedio
+2025,Cobertura de intereses,3.4964,veces,utilidad operativa / gastos financieros
+2025,Margen neto DuPont,4.1709,%,utilidad neta / ventas
+2025,Multiplicador del capital,2.3285,veces,saldo promedio
+2025,ROE DuPont,9.8995,%,margen neto × rotación de activos × multiplicador del capital
